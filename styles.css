@@ -68,6 +68,20 @@ h1 {
     font-size: 2.5rem;
 }
 
+h2 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+.callout {
+    font-size: 1.5rem;
+}
+
 .content {
     margin-top: 1rem;
 }
