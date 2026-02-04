@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
+    <nav aria-label="Primary">
         <div class="nav-container">
-            <div class="nav-brand">Apocryphal Enterprises LLC</div>
+            <a class="nav-brand" href="index.html">Apocryphal Enterprises LLC</a>
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -19,14 +19,109 @@
     </nav>
     
     <main>
-        <h1>Home</h1>
-        <h2>
-            <p>Welcome to Apocryphal Enterprises, an iOS app development company.</p>
-        </h2>
-        <div>
-            <p>You may be wondering, "which apps?" To which I say...</p>
-            <img src="resources/soon-cat.gif" style="width:36rem" />
-        </div>
+        <section class="hero">
+            <div>
+                <div class="eyebrow">iOS Studio</div>
+                <h1>Crafting calm, reliable iPhone experiences for thoughtful products.</h1>
+                <p>Apocryphal Enterprises is a boutique iOS development studio building modern, dependable apps. We specialize in elegant interfaces, clear product strategy, and long-term maintainability.</p>
+                <div class="button-row">
+                    <a class="button button-primary" href="contact.html">Start a project</a>
+                    <a class="button button-secondary" href="about.html">Meet the studio</a>
+                </div>
+            </div>
+            <div class="hero-card">
+                <img src="resources/hero-abstract.svg" alt="Abstract iOS interface concept" />
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="eyebrow">Services</div>
+            <h2>What we build</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>iOS App Development</h3>
+                    <p class="muted">SwiftUI-first apps that feel fast, intuitive, and trustworthy, with clean architectures that scale.</p>
+                </div>
+                <div class="card">
+                    <h3>Product Strategy</h3>
+                    <p class="muted">Clarity around goals, MVP scope, and roadmap so the build stays focused and realistic.</p>
+                </div>
+                <div class="card">
+                    <h3>UI/UX Design</h3>
+                    <p class="muted">Interfaces shaped by user flows, accessibility, and polished micro-interactions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="eyebrow">Process</div>
+            <h2>How we work</h2>
+            <div class="grid grid-2">
+                <div class="card process-step">
+                    <h3>Discover</h3>
+                    <p class="muted">We define the product vision, core user stories, and technical constraints.</p>
+                </div>
+                <div class="card process-step">
+                    <h3>Design</h3>
+                    <p class="muted">We shape the experience with wireframes, prototypes, and clear UI direction.</p>
+                </div>
+                <div class="card process-step">
+                    <h3>Build</h3>
+                    <p class="muted">We implement with modern iOS tooling, reusable components, and privacy-first practices.</p>
+                </div>
+                <div class="card process-step">
+                    <h3>Launch & Iterate</h3>
+                    <p class="muted">We ship deliberately, monitor feedback, and plan the next improvements.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="eyebrow">Quality</div>
+            <h2>Built for confidence</h2>
+            <ul class="list">
+                <li>Accessibility-first design with clear typography and readable contrast.</li>
+                <li>Performance tuned for fast start-up times and smooth animations.</li>
+                <li>Privacy-forward architecture that keeps user data minimal and secure.</li>
+                <li>Documentation and handoff material so teams can grow the product long term.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <div class="eyebrow">FAQ</div>
+            <h2>Answers up front</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>What types of projects are a good fit?</h3>
+                    <p class="muted">MVP builds, existing app redesigns, and iOS feature expansions are all ideal.</p>
+                </div>
+                <div class="card">
+                    <h3>How long does a project take?</h3>
+                    <p class="muted">Most MVP engagements run 8–14 weeks depending on scope and complexity.</p>
+                </div>
+                <div class="card">
+                    <h3>Can you help with strategy?</h3>
+                    <p class="muted">Yes. We regularly shape MVP scope, feature prioritization, and launch plans.</p>
+                </div>
+                <div class="card">
+                    <h3>What do you need to get started?</h3>
+                    <p class="muted">A clear problem statement, timeline, and budget range gets us moving fast.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta">
+            <div>
+                <h2>Ready to build something thoughtful?</h2>
+                <p>Share your idea and we’ll respond with next steps and a clear plan.</p>
+            </div>
+            <a class="button button-secondary" href="contact.html">Contact the studio</a>
+        </section>
+
+        <footer class="footer">
+            <p>Apocryphal Enterprises LLC · iOS product design and development.</p>
+            <p>Working with founders, creators, and small teams on purposeful digital products.</p>
+        </footer>
     </main>
 </body>
 </html>

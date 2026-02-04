@@ -7,25 +7,65 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
+    <nav aria-label="Primary">
         <div class="nav-container">
-            <div class="nav-brand">Apocryphal Enterprises LLC</div>
+            <a class="nav-brand" href="index.html">Apocryphal Enterprises LLC</a>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="about.html" class="active" aria-current="page">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
     
     <main>
-        <h1>About</h1>
-        <div class="content">
-            <p>
-                Apocryphal Enterprises LLC is run by Ben Freiband, a software developer based in Michigan. He enjoys iOS and full-stack web development, and all things nerdy.
-                For more information about him, go to <a href="https://benfreiband.com">benfreiband.com</a>.
-            </p>
-        </div>
+        <section class="hero">
+            <div>
+                <div class="eyebrow">About</div>
+                <h1>Small studio, steady partnership.</h1>
+                <p>Apocryphal Enterprises LLC is run by Ben Freiband, a software developer based in Michigan. He focuses on iOS and full-stack web development, with a calm, detail-first approach to product work. Outside of the studio, Ben has worked on <a href="https://apps.apple.com/us/app/duo-mobile/id422663827" target="_blank" rel="noopener noreferrer">Duo Mobile</a> and <a href="https://apps.apple.com/us/app/signet-signing/id1620800683" target="_blank" rel="noopener noreferrer">Signet</a>.</p>
+                <div class="button-row">
+                    <a class="button button-primary" href="contact.html">Start a project</a>
+                    <a class="button button-secondary" href="https://benfreiband.com">Learn more</a>
+                </div>
+            </div>
+            <div class="hero-card">
+                <h3>Studio values</h3>
+                <ul class="list">
+                    <li>Clear communication and dependable timelines.</li>
+                    <li>Accessible interfaces with thoughtful micro-details.</li>
+                    <li>Long-term maintainability over short-term hacks.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="eyebrow">Background</div>
+            <h2>Who you’ll work with</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Builder at heart</h3>
+                    <p class="muted">Ben has spent the last decade shipping iOS and web experiences that blend strategy, design, and development.</p>
+                </div>
+                <div class="card">
+                    <h3>Partners over projects</h3>
+                    <p class="muted">Engagements are designed for close collaboration, with crisp feedback loops and shared ownership.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta">
+            <div>
+                <h2>Let’s build something intentional.</h2>
+                <p>Share a short overview and we’ll respond with next steps.</p>
+            </div>
+            <a class="button button-secondary" href="contact.html">Contact the studio</a>
+        </section>
+
+        <footer class="footer">
+            <p>Apocryphal Enterprises LLC · iOS product design and development.</p>
+            <p>Working with founders, creators, and small teams on purposeful digital products.</p>
+        </footer>
     </main>
 </body>
 </html>

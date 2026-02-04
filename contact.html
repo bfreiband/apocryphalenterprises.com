@@ -7,22 +7,49 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
+    <nav aria-label="Primary">
         <div class="nav-container">
-            <div class="nav-brand">Apocryphal Enterprises LLC</div>
+            <a class="nav-brand" href="index.html">Apocryphal Enterprises LLC</a>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
             </ul>
         </div>
     </nav>
     
     <main>
-        <h1>Contact</h1>
-        <div class="content">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc9Q1IxFz5RuecaftYValPyb9SHatHhcLEcwISiYusL4gRAmQ/viewform?embedded=true" width="640" height="808" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div>
+        <section class="hero">
+            <div>
+                <div class="eyebrow">Contact</div>
+                <h1>Tell us what you’re building.</h1>
+                <p>Share your goals, timeline, and budget range. We’ll reply with clear next steps and a quick plan.</p>
+                <div class="button-row">
+                    <a class="button button-secondary" href="about.html">Meet the studio</a>
+                </div>
+            </div>
+            <div class="hero-card">
+                <h3>What to include</h3>
+                <ul class="list">
+                    <li>Product summary and target users.</li>
+                    <li>Timeline or launch window.</li>
+                    <li>Budget range or constraints.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="eyebrow">Intake</div>
+            <h2>Project inquiry form</h2>
+            <div class="card">
+                <iframe title="Project inquiry form" src="https://docs.google.com/forms/d/e/1FAIpQLSc9Q1IxFz5RuecaftYValPyb9SHatHhcLEcwISiYusL4gRAmQ/viewform?embedded=true" width="100%" height="808" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Apocryphal Enterprises LLC · iOS product design and development.</p>
+            <p>Working with founders, creators, and small teams on purposeful digital products.</p>
+        </footer>
     </main>
 </body>
 </html>
