@@ -42,7 +42,56 @@
             <div class="eyebrow">Intake</div>
             <h2>Project inquiry form</h2>
             <div class="card">
-                <iframe title="Project inquiry form" src="https://docs.google.com/forms/d/e/1FAIpQLSc9Q1IxFz5RuecaftYValPyb9SHatHhcLEcwISiYusL4gRAmQ/viewform?embedded=true" width="100%" height="808" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" target="web3forms_frame">
+                    <input type="hidden" name="access_key" value="bcd23ba9-2b34-47c1-a289-2894469e8c47">
+                    <input type="hidden" name="subject" value="New project inquiry from apocryphalenterprises.com">
+
+                    <div class="form-grid">
+                        <label class="form-field">
+                            <span>Name</span>
+                            <input type="text" name="name" autocomplete="name" required>
+                        </label>
+                        <label class="form-field">
+                            <span>Email</span>
+                            <input type="email" name="email" autocomplete="email" required>
+                        </label>
+                        <label class="form-field">
+                            <span>Company or team</span>
+                            <input type="text" name="company" autocomplete="organization">
+                        </label>
+                        <label class="form-field">
+                            <span>Role</span>
+                            <input type="text" name="role" autocomplete="organization-title">
+                        </label>
+                    </div>
+
+                    <label class="form-field">
+                        <span>Project summary</span>
+                        <textarea name="summary" rows="4" placeholder="What are you building and who is it for?" required></textarea>
+                    </label>
+
+                    <div class="form-grid">
+                        <label class="form-field">
+                            <span>Timeline or launch window</span>
+                            <input type="text" name="timeline" placeholder="e.g., MVP by June">
+                        </label>
+                        <label class="form-field">
+                            <span>Budget range</span>
+                            <input type="text" name="budget" placeholder="e.g., $15k–$30k">
+                        </label>
+                    </div>
+
+                    <label class="form-field">
+                        <span>Details or links</span>
+                        <textarea name="details" rows="5" placeholder="Links, constraints, or anything else to know."></textarea>
+                    </label>
+
+                    <div class="h-captcha" data-captcha="true"></div>
+
+                    <button class="button button-primary" type="submit">Send inquiry</button>
+                    <p class="form-note">We’ll reply within 2–3 business days.</p>
+                </form>
+                <iframe name="web3forms_frame" title="Web3Forms target" style="display:none;"></iframe>
             </div>
         </section>
 
@@ -51,5 +100,28 @@
             <p>Working with founders, creators, and small teams on purposeful digital products.</p>
         </footer>
     </main>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script>
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (event) => {
+                const hCaptcha = contactForm.querySelector('textarea[name="h-captcha-response"]');
+                if (!hCaptcha || !hCaptcha.value) {
+                    event.preventDefault();
+                    return;
+                }
+
+                const card = contactForm.closest('.card');
+                if (!card) return;
+                card.innerHTML = `
+                    <div class="form-thankyou">
+                        <div class="eyebrow">Thank you</div>
+                        <h3>We’ve received your inquiry.</h3>
+                        <p>We’ll review the details and reply within 2–3 business days.</p>
+                    </div>
+                `;
+            });
+        }
+    </script>
 </body>
 </html>
