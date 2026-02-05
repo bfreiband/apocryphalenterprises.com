@@ -103,6 +103,21 @@
     <script src="https://web3forms.com/client/script.js" async defer></script>
     <script>
         const contactForm = document.getElementById('contactForm');
+        const web3formsFrame = document.querySelector('iframe[name="web3forms_frame"]');
+        let submitted = false;
+
+        const showThankYou = () => {
+            const card = contactForm?.closest('.card');
+            if (!card) return;
+            card.innerHTML = `
+                <div class="form-thankyou">
+                    <div class="eyebrow">Thank you</div>
+                    <h3>We’ve received your inquiry.</h3>
+                    <p>We’ll review the details and reply within 2–3 business days.</p>
+                </div>
+            `;
+        };
+
         if (contactForm) {
             contactForm.addEventListener('submit', (event) => {
                 const hCaptcha = contactForm.querySelector('textarea[name="h-captcha-response"]');
@@ -110,16 +125,14 @@
                     event.preventDefault();
                     return;
                 }
+                submitted = true;
+            });
+        }
 
-                const card = contactForm.closest('.card');
-                if (!card) return;
-                card.innerHTML = `
-                    <div class="form-thankyou">
-                        <div class="eyebrow">Thank you</div>
-                        <h3>We’ve received your inquiry.</h3>
-                        <p>We’ll review the details and reply within 2–3 business days.</p>
-                    </div>
-                `;
+        if (web3formsFrame) {
+            web3formsFrame.addEventListener('load', () => {
+                if (!submitted) return;
+                showThankYou();
             });
         }
     </script>
